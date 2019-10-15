@@ -45,3 +45,11 @@ london_co = {
         'routing': True
     }
 }
+my_input_1 = input("Введите имя устройства: ")
+new_list = str(london_co.get(my_input_1).keys())[11:-2]
+my_input_2 = input("Введите имя параметра: "  + str(new_list))
+print(london_co.get(my_input_1).get(my_input_2))
+
+
+#print(new_list)
+

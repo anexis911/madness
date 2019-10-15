@@ -58,15 +58,15 @@ working_string = my_dict.get(my_input_1)
 print(working_string.format(my_input_3))
 
 
-access_template = ",".join([
+access_template = [
     'switchport mode access', 'switchport access vlan {}',
     'switchport nonegotiate', 'spanning-tree portfast',
     'spanning-tree bpduguard enable'
-])
+]
 
-trunk_template = ",".join([
+trunk_template = [
     'switchport trunk encapsulation dot1q', 'switchport mode trunk',
     'switchport trunk allowed vlan {}'
-])
+]
 
 
