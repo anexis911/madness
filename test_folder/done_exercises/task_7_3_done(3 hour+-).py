@@ -17,7 +17,7 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 '''
-my_list = [100,200,300,400,500,600,700,800,900]
+
 
 
 
@@ -25,9 +25,7 @@ my_list = [100,200,300,400,500,600,700,800,900]
 
 with open ("CAM_table.txt") as config:
 	for line in config:
-		line = line.strip().replace("-","")
-		for listline in my_list:
-			if str(listline) in line:
-				print(line)
-		
+		if "Gi0" in line:
+			print(line.strip())
+	
 

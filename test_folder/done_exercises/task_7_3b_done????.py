@@ -18,6 +18,6 @@ with open ("CAM_table.txt") as config:
 	for line in config:	
 		if ("Gi0/"+user_inp) in line:
 			print(line.strip())
-		brake	
+		
 				
 	

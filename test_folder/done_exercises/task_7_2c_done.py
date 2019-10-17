@@ -23,6 +23,8 @@ ignore = ['duplex', 'alias', 'Current configuration']
 
 with open (comm_list[1]) as config, open (comm_list[2], "w") as dest:
 	for line in config:
-		if not (line.startswith(ignore[2]) or line.startswith(ignore[1]) or line.startswith(" "+ignore[0])):
-				
-				dest.write(line)
+		if not (set(ignore) & set(line.split())):
+			print(line.strip())
+
+
+#подсмотрено, что знаком & можно определить пересечение множеств

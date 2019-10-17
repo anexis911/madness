@@ -20,3 +20,4 @@ with open ("config_sw1.txt") as config, open ("config_sw1_cleared.txt", "w") as 
 		if not (line.startswith(ignore[2]) or line.startswith(ignore[1]) or line.startswith(" "+ignore[0])):
 				print (line.strip())
 				dest.write(line)
+
