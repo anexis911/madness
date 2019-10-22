@@ -36,7 +36,6 @@ def get_int_vlan_map (input_file):
 				
 				for word_l in new_ac_line:
 					if word_l[-1].isdigit():
-						
 						acces_result[intf]=word_l
 			if "trunk" in line:
 				new_tr_line = line.split()
@@ -51,5 +50,3 @@ def get_int_vlan_map (input_file):
 		print(acces_result, trunk_result)
 				
 get_int_vlan_map("config_sw1.txt")
-			
-				
