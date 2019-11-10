@@ -29,10 +29,10 @@ def get_ip_from_cfg (configtxt):
 	
 	with open (configtxt) as f:
 		result=[]
-		regex = (r' ip address (?P<ipadr>\S+) +(?P<mask>\S+)')
+		
 		for line in f:
 			if line.startswith(" ip address"):
-				match = re.search(regex,line)
+				match = re.search(r' ip address (?P<ipadr>\S+) +(?P<mask>\S+)',line)
 				if match:
 					result.append(match.groups())
 		
@@ -45,4 +45,4 @@ if __name__ == "__main__":
 	pprint(result)
 
 	
-get_ip_from_cfg("config_r1.txt")
+

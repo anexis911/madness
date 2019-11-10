@@ -50,7 +50,7 @@ def parse_sh_cdp_neighbors (in_command):
 		final_result[intff] = result	
 	
 	pprint(final_result)	 
-	return final_result
+	return result
 
 
 

@@ -1,0 +1,35 @@
+- R1:
+    SW1:
+      Eth 0/0: Eth 0/1
+- SW1:
+    R1:
+      Eth 0/1: Eth 0/0
+    R2:
+      Eth 0/2: Eth 0/0
+    R3:
+      Eth 0/3: Eth 0/0
+    R4:
+      Eth 0/4: Eth 0/0
+- R3:
+    SW1:
+      Eth 0/0: Eth 0/3
+- R5:
+    R2:
+      Eth 0/0: Eth 0/1
+    R4:
+      Eth 0/1: Eth 0/1
+- R2:
+    R5:
+      Eth 0/1: Eth 0/0
+    R6:
+      Eth 0/2: Eth 0/1
+    SW1:
+      Eth 0/0: Eth 0/2
+- R4:
+    R5:
+      Eth 0/1: Eth 0/1
+    SW1:
+      Eth 0/0: Eth 0/4
+- R6:
+    R2:
+      Eth 0/1: Eth 0/2

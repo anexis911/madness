@@ -28,3 +28,40 @@ R6           Fa 0/2          143           R S I           2811       Fa 0/0
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
 
+
+import sys
+
+command_output = sys.argv[1]
+
+
+
+
+
+def parse_cdp_neighbors(command_output):
+	result_dict={}
+	
+	with open ("sh_cdp_n_sw1.txt") as f:
+		try:
+			
+			for line in f:
+				
+				if "Eth" in line:
+					line = line.strip()
+					my_list = line.split()
+					
+					result_dict[my_list[0]]=my_list[1:]
+					#print(my_list)
+				
+				
+				#if command_output in result_dict.keys():
+					
+			
+			res_dictt = dict(zip(result_dict.keys(), result_dict.values()))
+			print(res_dictt)
+			
+		except KeyError:
+			print("1")	
+		
+
+parse_cdp_neighbors(command_output)
+

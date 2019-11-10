@@ -37,7 +37,6 @@ def generate_description_from_cdp (in_file):
 		for line in f:
 			line = line.strip()
 			match = re.search(regex, line)
-			
 			if match:
 				result["Eth" +match.group("locintf")] = myform.format(sw = match.group("devID"), port = match.group("portID"))
 					

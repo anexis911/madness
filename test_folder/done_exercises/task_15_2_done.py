@@ -40,7 +40,7 @@ def sh_ip_int_br (configtxt):
 		
 	#print(result)		
 	return result
-	
+
 
 if __name__ == "__main__":
 	result =sh_ip_int_br("sh_ip_int_br.txt")

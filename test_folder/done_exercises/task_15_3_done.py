@@ -48,12 +48,9 @@ object network LOCAL_{ip}
 		for line in f:
 			match = re.search(regex, line)
 			if match:
-				#print(match.group("ip"))
 				out.write(myform.format(ip = match.group("ip"), tcp = match.group("tcp"), intfnum = match.group("intfnum")))
 				
 	
-
-
 
 if __name__ == "__main__":
 	convert_ios_nat_to_asa("cisco_nat_config.txt", "asa_nat.txt")

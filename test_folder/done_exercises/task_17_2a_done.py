@@ -64,10 +64,10 @@ def parse_sh_cdp_neighbors (in_file):
 				final_result[intff] = result
 			
 	
-	pprint(final_result)	 
+	#pprint(final_result)	 
 	return final_result
 
-#parse_sh_cdp_neighbors("sh_cdp_n_r2.txt")
+
 
 
 def generate_topology_from_cdp (list_of_files, save_to_filename=None):

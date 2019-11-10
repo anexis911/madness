@@ -30,4 +30,4 @@ with open("ospf.txt") as config:
 		print(my_template.format(protocol="OSPF",prefix=new_info[1],ad_metric=new_info[2],next_hop=new_info[3],last_update=new_info[4],outb_interface=new_info[5]))
 
 
-
+//
