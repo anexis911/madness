@@ -18,3 +18,25 @@
 
 Проверить работу функции на примере вывода команды sh ip int br.
 '''
+import textfsm
+from tabulate import tabulate
+from pprint import pprint
+
+
+
+def parse_command_output (template, command_output):
+	with open (template) as template, open (command_output) as output:
+		result = {}
+		n=1
+		re_table = textfsm.TextFSM(template)
+		header = re_table.header
+		results = re_table.ParseText(output.read())
+		for res in results:
+			result[n] =dict(zip(header, res))
+			n+=1
+		return(result)
+
+
+
+if __name__ == "__main__":
+	pprint(parse_command_output('templates/sh_ip_int_br.template', 'output/sh_ip_int_br.txt'))

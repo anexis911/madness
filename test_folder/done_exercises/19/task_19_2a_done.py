@@ -50,6 +50,6 @@ with open ('devices.yaml') as f:
 	data = yaml.safe_load(f)
 	result = []
 	for line_dict in data:
-		result.append(send_config_commands(line_dict, verbose=False))
+		result.append(send_config_commands(line_dict))
 	
 	pprint(result)

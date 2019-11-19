@@ -23,10 +23,10 @@ def parse_command_output (template, command_output):
 		re_table = textfsm.TextFSM(template)
 		header = re_table.header
 		result = re_table.ParseText(output.read())
-		print(header, result)
+		return(header,result)
 
 
 
 if __name__ == "__main__":
-	parse_command_output('templates/sh_ip_int_br.template', 'output/sh_ip_int_br.txt')
+	print(parse_command_output('templates/sh_ip_int_br.template', 'output/sh_ip_int_br.txt'))
 

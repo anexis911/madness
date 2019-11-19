@@ -120,7 +120,6 @@ def send_config_commands (device, verbose=True):
 				if match:
 					print('Error occured while doing command:', command, ' Reason: ', match.groups())
 				
-					
 				result[command] = cfg
 		return result
 	except netmiko.NetMikoAuthenticationException as err:

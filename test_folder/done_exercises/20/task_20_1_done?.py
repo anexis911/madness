@@ -49,8 +49,6 @@ def ping_ip_addresses (ip_list, limit=3):
 	return (reachable_ip+unreachable_ip)
 			
 
-	
-	#return(reachable_ip)
 			
 if __name__ == "__main__":
 	pprint(ping_ip_addresses(ip))
