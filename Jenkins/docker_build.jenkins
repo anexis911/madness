@@ -1,5 +1,6 @@
 #!groovy
-// Run docker build
+// Check ub1 properties
+// took from https://github.com/ksemaev/project_template/blob/master/jenkinsfiles/first_steps.jenkins
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -10,12 +11,14 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
-        stage("create docker image") {
+    stages {
+       stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
                 dir ('Docker') {
                 	sh 'docker build . '
                 }
             }
-        }
+       
+    }
 }
