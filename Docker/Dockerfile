@@ -1,10 +1,5 @@
-FROM ubuntu:16.04
-
-RUN apt-get -y update
-RUN apt-get -y install apache2
-
-RUN echo 'Hello world from docker!' > /var/www/html/index.html
-
-
-CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
-EXPOSE 80
+FROM alpine
+RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python py-pip && \
+    pip install awscli
+RUN apk --purge -v del py-pip
+CMD tail -f /dev/null
