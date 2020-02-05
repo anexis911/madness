@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('Docker') {
-                	sh 'docker build -t anexis/toolbox.latest . '
+                	sh 'docker build -t python/toolbox.latest . '
 
 }
 }
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 echo "====================start pushing image ================================"
                 sh '''
-                docker push anexis/toolbox:latest
+                docker push anexis/toolbox.latest
                 '''
             }
         }
